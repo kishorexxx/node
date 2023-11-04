@@ -1,20 +1,21 @@
-// Import the express library
-const express = require('express');
+//import the express library
+const express=require("express");
 
-//create new express application or object
-const app = express();
+//create new express application
+const app=express();
 
-const port = 3000;
+const PORT=3000;
 
-app.get("/",(req, res) => {
-    res.send("hello from express!!!");
-    });
-    
-// define a route for the homepage
-app.get("/home",(req, res) => {
-res.send("hello from homepage!!!");
+app.get("/",(req,res)=>{
+  res.send("Hello from express!!!");
 });
 
-app.listen(port, () => {
-    console.log(`server is running on http:localhost:${port}`);
-})
+//Define a route for the homepage
+
+app.get("/home",(req,res)=>{
+  res.send("Hello from Home Page!!!");
+});
+
+app.listen(PORT,()=>{
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
